@@ -17,6 +17,10 @@ class ImagesController {
     @Autowired
     lateinit var imageServices: ImageServices
 
+    @GetMapping("/")
+    fun welcome():String{
+       return "home"
+    }
 
     @GetMapping("/getImages")
     fun findAll(): List<Images> {
@@ -39,7 +43,4 @@ class ImagesController {
         }
         return status
     }
-
-    @ResponseStatus(value = HttpStatus.BAD_REQUEST, reason = "ups algo salio mal")
-    class BardRequest : RuntimeException()
 }
