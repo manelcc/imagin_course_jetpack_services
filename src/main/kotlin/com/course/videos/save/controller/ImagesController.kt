@@ -8,7 +8,6 @@ import org.springframework.web.multipart.MultipartFile
 import org.springframework.http.ResponseEntity
 
 
-
 @RestController
 @RequestMapping("/api")
 class ImagesController {
@@ -16,9 +15,13 @@ class ImagesController {
     @Autowired
     lateinit var imageServices: ImageServices
 
-    @GetMapping("/")
+    @RequestMapping("/")
     fun welcome():String{
        return "home"
+    }
+    @RequestMapping("/home")
+    fun welcomeHome():String{
+        return "home"
     }
 
     @GetMapping("/getImages")

@@ -11,7 +11,7 @@ import org.springframework.util.StringUtils;
 
 
 @Service
-class ImageServicesImpl: ImageServices {
+public class ImageServicesImpl: ImageServices {
 
     @Autowired
     lateinit var  repoImages: ImagesRepository
